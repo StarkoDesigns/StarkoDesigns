@@ -113,54 +113,46 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="aaabf971-b5be-4eec-8ca3-4b2e08052d70">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder"> <i class="fa-solid fa-circle-check"></i> Form submission successful!</div>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3"> <i class="fa-solid fa-circle-exclamation"></i> Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit"> <i class="fa-solid fa-envelope"></i> Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- 
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+ -->
+  
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
+      <input type="hidden" name="access_key" value="82e94555-83bb-4cce-92ca-d8796b99c207" />
+      <input type="hidden" name="subject" value="New Contact Form Submission from Starko Designs Website" />
+      <input type="hidden" name="from_name" value="Starko Designs Website" />
+      <input type="hidden" name="redirect" value="https://starkodesigns.site/#contact">
+      <!-- More customization options available in the docs: https://docs.web3forms.com -->
+  
+      <div class="form-group-container">
+        <div class="form-group">
+          <label for="name" class="form-label"> <i class="fa-solid fa-user"></i> Full Name</label>
+          <input id="name" name="name" class="form-input" placeholder="" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label"> <i class="fa-solid fa-at"></i> Email</label>
+          <input id="email" name="email" class="form-input" placeholder="" type="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label"> <i class="fa-solid fa-phone"></i> Phone</label>
+          <input id="phone" name="phone" class="form-input" placeholder="" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label"> <i class="fa-solid fa-message"></i> Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder=""></textarea>
+        </div>
+      </div>
+      <button class="form-submit" type="submit"> <i class="fa-solid fa-envelope"></i> Send</button>
+    </form>
+      </div>
+   </div>
+</div>
+<form>
+</section>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
